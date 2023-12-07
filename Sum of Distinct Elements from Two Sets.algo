@@ -1,0 +1,33 @@
+ALGORITHM SumOfDistinctElements
+VAR
+    Set1: Array
+    Set2: Array
+    distinctElements: Array
+    sum: Integer
+BEGIN
+    // Initialize arrays Set1 and Set2
+    // Set1 = [3, 1, 7, 9], Set2 = [2, 4, 1, 9, 3]
+    
+    distinctElements := [] // Initialize an empty array
+    
+    sum := 0 // Initialize sum to zero
+    
+    // Loop through Set1 to find distinct elements and calculate sum
+    FOR each element in Set1 DO
+        IF element NOT IN distinctElements THEN
+            ADD element TO distinctElements
+            sum := sum + element
+        END_IF
+    END_FOR
+    
+    // Loop through Set2 to find distinct elements and calculate sum
+    FOR each element in Set2 DO
+        IF element NOT IN distinctElements THEN
+            ADD element TO distinctElements
+            sum := sum + element
+        END_IF
+    END_FOR
+    
+    // Display the sum of distinct elements
+    DISPLAY sum
+END
